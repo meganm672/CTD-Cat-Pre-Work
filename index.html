@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cat Images</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-    <h1>Cat Breeds</h1>
-    <div id="cat-breed"></div>
+    <div id="buttons">
+        <button onClick="showBreedsPage()" id="breed-button">Breeds</button>
+    </div>
+    <div class="breed-page" id="breed-page">
+        <button onClick="showMainPage()" id="back-button">Back</button>
+        <select onchange="showBreedImage(this.value)" name="breed-selector" id="breed-selector">
+        </select>
+
+        <div>
+            <a id="wiki-link" target="_blank"></a>
+            <div id="breed-json"></div>
+        </div>
+
+        <div id="img-container">
+            <img id="breed-image"></img>
+        </div>
+
+    </div>
+    <div id="maincontent">
+        <h1>Cat Images</h1>
+        <button onClick="getNewCatImages()">Get New Cat Images</button>
+        <div id="grid" class="imgrid"></div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
