@@ -1,7 +1,6 @@
 
 let storedBreeds = [];
 //Breed API Call
-// Fetch breeds from server
 async function fetchBreedsAndRender() {
     try {
         const response = await fetch('/breeds');
@@ -72,7 +71,6 @@ function showMainPage() {
 }
 
 // fetching the cat images for the grid 
-// Fetch cat images from server
 async function fetchCatImagesAndRender() {
     try {
         const response = await fetch('/cat-images');
@@ -105,8 +103,6 @@ function getNewCatImages() {
 }
 
 //fetching a single cat image for the main page
-
-// Function to fetch a single cat image URL from server
 async function fetchSingleCatImageAndRender() {
     try {
         const response = await fetch('/single-cat-image');
