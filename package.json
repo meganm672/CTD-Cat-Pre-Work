@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "node server.js"
+  },
   "devDependencies": {
     "dotenv": "^16.4.5"
   },
