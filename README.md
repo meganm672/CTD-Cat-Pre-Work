@@ -20,5 +20,10 @@ Getting Started
 ## Deployed Site
 
 [Cool-Cats](https://cat-breed-app.onrender.com/)
-
-![Alt text](CoolCats.png)
+## Images Of Cat Site
+Main Page:
+![Alt text](images/CoolCats.png)
+Breed Page:
+![Alt text](images/BreedPage.png)
+Images Page:
+![Alt text](images/CatImagesPage.png)
