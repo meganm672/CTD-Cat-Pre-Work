@@ -11,26 +11,44 @@
 <body>
     <div id="buttons">
         <button onClick="showBreedsPage()" id="breed-button">Breeds</button>
+        <button onClick="showCatImagesPage()" id="cat-images-button">Cat Images</button>
     </div>
     <div class="breed-page" id="breed-page">
         <button onClick="showMainPage()" id="back-button">Back</button>
         <select onchange="showBreedImage(this.value)" name="breed-selector" id="breed-selector">
         </select>
+        <h1>Cat Breeds</h1>
 
-        <div>
-            <a id="wiki-link" target="_blank"></a>
-            <div id="breed-json"></div>
+        <div class="card">
+            <div>
+                <h3 >Breed:</h3>
+                <span id="breed-name"></span>
+            </div>
+            <div>
+                <h3>Tempermant:</h3> 
+                <span id="breed-json"></span>
+            </div>
+            <div>
+                <h3>Link:</h3> 
+                <a id="wiki-link" target="_blank"></a>
+            </div>
+            <div id="img-container">
+                <img id="breed-image"></img>
+            </div>
         </div>
 
-        <div id="img-container">
-            <img id="breed-image"></img>
-        </div>
 
     </div>
-    <div id="maincontent">
+    <div class="cat-images-page" id="cat-images-page">
+        <button onClick="getNewCatImages()" id="new-cats-button">Get New Cat Images</button>
+        <button onClick="showMainPage()" id="back-button-cat-images">Back</button>
         <h1>Cat Images</h1>
-        <button onClick="getNewCatImages()">Get New Cat Images</button>
         <div id="grid" class="imgrid"></div>
+    </div>
+
+    <div id="maincontent">
+        <h1>Welcome to the Cat Images App</h1>
+        <img id="main-cat-image" />
     </div>
     <script src="script.js"></script>
 </body>
