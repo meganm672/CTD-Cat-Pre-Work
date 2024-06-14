@@ -53,17 +53,17 @@ function showBreedsPage() {
     document.getElementById('breed-page').style.display = 'block';
     document.getElementById('maincontent').style.display = 'none';
     document.getElementById('cat-images-page').style.display = 'none';
-    document.getElementById('back-button-breed').style.display = 'block';
+    document.getElementById('back-button-breed').style.display = 'inline-block';
     document.getElementById('back-button-cat-images').style.display = 'none';
 }
 
 function showCatImagesPage() {
     document.getElementById('breed-button').style.display = 'none';
     document.getElementById('cat-images-button').style.display = 'none';
-    document.getElementById('back-button-cat-images').style.display = 'block';
+    document.getElementById('back-button-cat-images').style.display = 'inline-block';
     document.getElementById('breed-page').style.display = 'none';
     document.getElementById('maincontent').style.display = 'none';
-    document.getElementById('cat-images-page').style.display = 'block';
+    document.getElementById('cat-images-page').style.display = 'inline-block';
     document.getElementById('back-button-breed').style.display = 'none';
 
     getNewCatImages(); // Load images when navigating to the page

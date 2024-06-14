@@ -2,34 +2,39 @@ body{
   background-color: lavender;
 }
 
+h1 {
+  text-align: center;
+  color: rgb(31, 133, 99);
+}
+/* Button Style */
 #buttons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
+button{
+  background-color: rgb(41, 41, 192);
+  color: white;
+  border-radius: 1em;
+  padding: 8px;
+}
+button:hover{
+  background-color: aliceblue;
+  color: blue;
+}
+
 #breed-button,
 #cat-images-button {
   display: block;
   margin: 0 10px;
-  background-color: rgb(41, 41, 192);
-  color: white;
-  border-radius: 1em;
-  padding: 5px;
 }
 
 #back-button-breed,
 #back-button-cat-images {
   display: none;
-  background-color: rgb(41, 41, 192);
-  color: white;
 }
-
-.breed-page,
-.cat-images-page {
-  display: none;
-}
-
+/* main page style */
 #maincontent {
   display: flex;
   flex-direction: column;
@@ -44,11 +49,11 @@ body{
   border-radius: 2em;
 }
 
-h1 {
-  text-align: center;
-  color: rgb(58, 163, 128);
+.breed-page,
+.cat-images-page {
+  display: none;
 }
-
+/* breed page style */
 select {
   width: 25%;
   padding: 10px;
@@ -69,7 +74,6 @@ select {
   text-align: center;
   max-width: 600px;
   margin: auto;
- 
 }
 
 .card h2, .card div {
@@ -94,6 +98,10 @@ select {
   border-radius: 2em;
 }
 
+#wiki-link:hover{
+  color: rgb(242, 25, 61);
+}
+/* cat images page style */
 .col {
   padding: 1%;
 }
