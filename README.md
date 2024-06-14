@@ -20,3 +20,5 @@ Getting Started
 ## Deployed Site
 
 [Cool-Cats](https://cat-breed-app.onrender.com/)
+
+![Alt text](CoolCats.png)
