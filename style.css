@@ -1,4 +1,4 @@
-body{
+body {
   background-color: lavender;
 }
 
@@ -6,6 +6,7 @@ h1 {
   text-align: center;
   color: rgb(31, 133, 99);
 }
+
 /* Button Style */
 #buttons {
   display: flex;
@@ -13,13 +14,14 @@ h1 {
   margin-top: 20px;
 }
 
-button{
+button {
   background-color: rgb(41, 41, 192);
   color: white;
   border-radius: 1em;
   padding: 8px;
 }
-button:hover{
+
+button:hover {
   background-color: aliceblue;
   color: blue;
 }
@@ -34,6 +36,7 @@ button:hover{
 #back-button-cat-images {
   display: none;
 }
+
 /* main page style */
 #maincontent {
   display: flex;
@@ -43,6 +46,7 @@ button:hover{
   justify-content: center;
   align-items: center;
 }
+
 #main-cat-image {
   height: 600px;
   margin-top: 20px;
@@ -53,6 +57,7 @@ button:hover{
 .cat-images-page {
   display: none;
 }
+
 /* breed page style */
 select {
   width: 25%;
@@ -76,13 +81,14 @@ select {
   margin: auto;
 }
 
-.card h2, .card div {
+.card h2,
+.card div {
   margin: 10px 0;
   width: 100%;
   text-align: left;
 }
 
-#breed-name{
+#breed-name {
   font-size: 1.5em;
 }
 
@@ -98,9 +104,10 @@ select {
   border-radius: 2em;
 }
 
-#wiki-link:hover{
+#wiki-link:hover {
   color: rgb(242, 25, 61);
 }
+
 /* cat images page style */
 .col {
   padding: 1%;

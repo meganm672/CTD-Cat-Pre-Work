@@ -4,7 +4,7 @@ const CAT_IMAGE_URL = "https://api.thecatapi.com/v1/images/search"
 const API_KEY = "live_s43IkOpOVF2G1mmgzo7sUAGA9uqzMIeRgbPj194VWliOEv1rPEhEIi8uuWuECTF7"
 
 let storedBreeds = [];
-
+//Breed API Call
 fetch(`${BREED_URL}/?api_key=${API_KEY}`)
     .then((response) => {
         return response.json()
@@ -33,7 +33,7 @@ fetch(`${BREED_URL}/?api_key=${API_KEY}`)
     .catch(function (error) {
         console.log(error);
     });
-
+//Showing image for specific breed
 function showBreedImage(index) {
     const breed = storedBreeds[index];
     if (breed) {
@@ -46,7 +46,7 @@ function showBreedImage(index) {
         wikiLink.innerHTML = breed.wikipedia_url;
     }
 }
-
+// called when the breeds button is clicked
 function showBreedsPage() {
     document.getElementById('breed-button').style.display = 'none';
     document.getElementById('cat-images-button').style.display = 'none';
@@ -56,7 +56,7 @@ function showBreedsPage() {
     document.getElementById('back-button-breed').style.display = 'inline-block';
     document.getElementById('back-button-cat-images').style.display = 'none';
 }
-
+// called when the cat images button is clicked
 function showCatImagesPage() {
     document.getElementById('breed-button').style.display = 'none';
     document.getElementById('cat-images-button').style.display = 'none';
@@ -66,9 +66,9 @@ function showCatImagesPage() {
     document.getElementById('cat-images-page').style.display = 'inline-block';
     document.getElementById('back-button-breed').style.display = 'none';
 
-    getNewCatImages(); // Load images when navigating to the page
+    getNewCatImages();
 }
-
+// called when a back button is pushed
 function showMainPage() {
     document.getElementById('breed-button').style.display = "block";
     document.getElementById('cat-images-button').style.display = "block";
@@ -79,7 +79,7 @@ function showMainPage() {
     document.getElementById('back-button-cat-images').style.display = 'none';
 }
 
-
+// fetching the cat images for the gird 
 fetch(`${CAT_IMAGE_URL}?limit=9&api_key=${API_KEY}`)
     .then((response) => {
         return response.json();
@@ -101,7 +101,7 @@ fetch(`${CAT_IMAGE_URL}?limit=9&api_key=${API_KEY}`)
     .catch(function (error) {
         console.log(error);
     })
-
+// fetching new batch of cat images
 function getNewCatImages() {
     fetch(`${CAT_IMAGE_URL}?limit=9&api_key=${API_KEY}`)
         .then((response) => {
@@ -129,15 +129,15 @@ function getNewCatImages() {
         });
 }
 
-
-    fetch(`${CAT_IMAGE_URL}`)
-        .then((response) => response.json())
-        .then((data) => {
-                document.getElementById('main-cat-image').src = data[0].url;
-        })
-        .catch
-        (function (error) {
-            console.log(error);
-        });
+//fetching a single cat image for the main page
+fetch(`${CAT_IMAGE_URL}`)
+    .then((response) => response.json())
+    .then((data) => {
+        document.getElementById('main-cat-image').src = data[0].url;
+    })
+    .catch
+    (function (error) {
+        console.log(error);
+    });
 
 
