@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Images</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="buttons">
+        <button onclick="showBreedsPage()" id="breed-button">Breeds</button>
+        <button onclick="showCatImagesPage()" id="cat-images-button">Cat Images</button>
+    </div>
+    <div id="maincontent">
+        <h1>Welcome to the Cat Images App</h1>
+        <img id="main-cat-image" />
+    </div>
+    <div class="breed-page" id="breed-page">
+        <button onclick="showMainPage()" id="back-button-breed">Back</button>
+        <select onchange="showBreedImage(this.value)" name="breed-selector" id="breed-selector">
+        </select>
+        <h1>Cat Breeds</h1>
+
+        <div class="card">
+            <div>
+                <h3>Breed:</h3>
+                <span id="breed-name"></span>
+            </div>
+            <div>
+                <h3>Tempermant:</h3>
+                <span id="breed-json"></span>
+            </div>
+            <div>
+                <h3>Link:</h3>
+                <a id="wiki-link" target="_blank"></a>
+            </div>
+            <div id="img-container">
+                <img id="breed-image"></img>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="cat-images-page" id="cat-images-page">
+        <button onclick="getNewCatImages()" id="new-cats-button">Get New Cat Images</button>
+        <button onclick="showMainPage()" id="back-button-cat-images">Back</button>
+        <h1>Cat Images</h1>
+        <div id="grid" class="imgrid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
