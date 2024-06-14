@@ -1,11 +1,12 @@
 {
+  "name": "my-cat-app",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
     "dev": "node server.js"
   },
-  "devDependencies": {
-    "dotenv": "^16.4.5"
-  },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5"
   }
 }
